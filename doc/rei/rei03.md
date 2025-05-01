@@ -4,7 +4,7 @@
 _(Introduzir as entidade-tipo e associações do sistema, adicionalmente apresentar o diagrama do modelo Entidade-Associação.)_
 
 Exemplo de inserção de uma imagem:   
-[Modelo E/A](images/image02.png)   
+![Modelo E/A](images/image02.png)   
 
 Paciente
 Representa um utente da clínica. Cada paciente possui um código único (idPaciente), assim como o seu nome, morada, data de nascimento e contacto. Esta entidade armazena as informações necessárias para agendar e associar consultas a cada indivíduo.
