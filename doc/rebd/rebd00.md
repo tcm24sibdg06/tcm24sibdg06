@@ -9,11 +9,11 @@
 :[SQL](rebd05.md)  
 
 ## Group _06_
-
-* Marco Amaro Oliveira [@MarcoOliveira](https://github.com/marcoamarooliveira)
-* Other team members
-
+* Bernardo Azevedo
+* Ricardo Graça
+* Rodrigo Pedra [@RodrigoPedra](https://github.com/RSPedra)
 ---
-_You can add a footer menu for navigation_ 
+
+
 < Previous | [^ Main](/../../) | [Next >](rebd01.md)
 :--- | :---: | ---: 
