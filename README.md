@@ -6,6 +6,6 @@ Este repositório serve para o projeto desenvolvido em prol de Sistemas de Infor
 :[REBD](doc/rebd/rebd00.md)
 
 ## Team
-* [@BernardoAzevedo]
+* [@BernardoAzevedo](https://github.com/Bernardo-Azevedo-045200)
 * [@RicardoGraça]
 * [@RodrigoPedra](https://github.com/RSPedra)
