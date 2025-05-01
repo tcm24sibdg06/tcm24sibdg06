@@ -1,9 +1,25 @@
 # C3 : Esquema conceptual
 
 ## Modelo E/A
-_(Introduzir as entidade-tipo e associações do sistema, adicionalmente apresentar o diagrama do modelo Entidade-Associação.)_
+Entidades:
+PACIENTE (idPaciente, nome, morada, dataNascimento, contacto)
+MEDICO (idMedica, nome, contacto)
+ESPECIALIDADE (idEspecialidade, nome)
+FUNCIONARIO (idFuncionario, nome, contacto)
+CONSULTA (idConsulta, idPaciente (FK), idMedico (FK), idEspecialidade (FK), idFuncionario (FK), local, dataHoraInicio)
+HISTORICO_CONSULTA (idHistorico, idFuncionario (FK), idConsulta (FK), dataHoraAlteracao, tipoAlteracao)
+REGISTO_CLINICO (idRegistoClinico, idMedico (FK), idConsulta (FK), dataHora, descricao)
 
-Exemplo de inserção de uma imagem:   
+Associações:
+Possui (CONSULTA, REGISTO_CLINICO)
+Realiza (MEDICO, CONSULTA)
+Pertence (CONSULTA, ESPECIALIDADE)
+AtuaEm (MEDICO, ESPECIALIDADE)
+Marca (FUNCIONARIO, CONSULTA)
+Sofre (CONSULTA, HISTORICO_CONSULTA)
+Tem (PACIENTE, CONSULTA)
+Altera (FUNCIONARIO, HISTORICO_CONSULTA)
+
 ![Modelo E/A](images/image02.png)   
 
 Paciente
@@ -20,6 +36,12 @@ Representa um trabalhador administrativo da clínica. Cada funcionário tem um c
 
 Consulta
 Representa um agendamento entre um paciente e um médico para uma especialidade específica. Contém o código da consulta (idConsulta) e os códigos do paciente, médico e especialidade (como FKs), bem como a data e hora de início da consulta e local.
+
+Registo clinico
+Serve para o medico tirar apontamentos pós consulta
+
+Histórico consulta
+Contém o histórico completo de consultas de cada paciente, médico e especialidade, possibilitando a sua verificação e até mesmo o número de consultas num certo espaço de tempo.
 
 
 ## Regras de negócio adicionais (Restrições)
