@@ -7,5 +7,5 @@ Este repositório serve para o projeto desenvolvido em prol de Sistemas de Infor
 
 ## Team
 * [@BernardoAzevedo](https://github.com/Bernardo-Azevedo-045200)
-* [@RicardoGraça]
+* [@RicardoGraça](https://github.com/r1card015)
 * [@RodrigoPedra](https://github.com/RSPedra)
