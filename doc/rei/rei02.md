@@ -15,4 +15,3 @@ e cancelamento das consultas
 
 ---
 [< Previous](rei01.md) | [^ Main](/../../) | [Next >](rei03.md)
-:--- | :---: | ---: 
