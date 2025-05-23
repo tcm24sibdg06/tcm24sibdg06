@@ -52,4 +52,3 @@ Contém o histórico completo de consultas de cada paciente, médico e especiali
 
 ---
 [< Previous](rebd01.md) | [^ Main](/../../) | [Next >](rebd03.md)
-:--- | :---: | ---: 
