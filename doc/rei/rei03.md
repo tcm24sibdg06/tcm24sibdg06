@@ -52,4 +52,3 @@ Contém o histórico completo de consultas de cada paciente, médico e especiali
 
 ---
 [< Previous](rei02.md) | [^ Main](/../../) | Next >
-:--- | :---: | ---: 
