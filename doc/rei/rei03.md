@@ -1,4 +1,4 @@
-# C3 : Esquema conceptual
+# Esquema conceptual
 
 ## Modelo E/A
 ### Entidades:
