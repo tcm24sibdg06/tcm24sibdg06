@@ -9,9 +9,9 @@
 :[SQL](rebd05.md)  
 
 ## Group _06_
-* Bernardo Azevedo
-* Ricardo Graça
-* Rodrigo Pedra [@RodrigoPedra](https://github.com/RSPedra)
+* [@BernardoAzevedo](https://github.com/Bernardo-Azevedo-045200)
+* [@Ricardo Graça](https://github.com/r1card015)
+* [@RodrigoPedra](https://github.com/RSPedra)
 ---
 
 
