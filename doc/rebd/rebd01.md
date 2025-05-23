@@ -10,4 +10,3 @@ Assim, os funcionários poderão ter acesso às seguintes funcionalidades: marca
 
 ---
 [< Previous](rebd00.md) | [^ Main](/../../) | [Next >](rebd02.md)
-:--- | :---: | ---: 
