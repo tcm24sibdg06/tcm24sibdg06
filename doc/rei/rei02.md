@@ -1,4 +1,4 @@
-# C2 : Especificação de Requisitos
+# Especificação de Requisitos
 
 As opções disponíveis no sistema da clinica médica dependerão da função de cada pessoa ao
 aceder ao sistema.
