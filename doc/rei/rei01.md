@@ -49,4 +49,3 @@ processos internos da clínica.
 
 ---
 [< Previous](rei00.md) | [^ Main](/../../) | [Next >](rei02.md)
-:--- | :---: | ---: 
