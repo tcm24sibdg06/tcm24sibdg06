@@ -1,4 +1,4 @@
-# C1 : Introdução
+# Introdução
 
 
 ## Descrição do trabalho
