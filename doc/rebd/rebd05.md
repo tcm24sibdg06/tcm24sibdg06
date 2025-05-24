@@ -17,15 +17,15 @@ CREATE TABLE IF NOT EXISTS PACIENTE (
   `idPaciente` BIGINT unsigned NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
   `dataNascimento` DATE NOT NULL,
-  `morada` VARCHAR(200) DEFAULT NULL,
-  `telefone` VARCHAR(15) DEFAULT NULL,
+  `morada` VARCHAR(200) default NULL,
+  `telefone` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`idPaciente`)
 );
 
 CREATE TABLE IF NOT EXISTS MEDICO (
   `idMedico` BIGINT unsigned NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
-  `telefone` VARCHAR(15) DEFAULT NULL,
+  `telefone` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`idMedico`)
 );
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS ESPECIALIDADE (
 CREATE TABLE IF NOT EXISTS FUNCIONARIO (
   `idFuncionario` BIGINT unsigned NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
-  `telefone` VARCHAR(15) DEFAULT NULL,
+  `telefone` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`idFuncionario`)
 );
 
