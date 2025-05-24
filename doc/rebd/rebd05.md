@@ -48,13 +48,11 @@ CREATE TABLE IF NOT EXISTS CONSULTA (
   `dataHora` DATETIME NOT NULL,
   `idPaciente` BIGINT unsigned NOT NULL,
   `idMedico` BIGINT unsigned NOT NULL,
-  `idFuncionario` BIGINT unsigned NOT NULL,
   `idEspecialidade` BIGINT unsigned NOT NULL,
   `observacoes` TEXT default NULL,
   PRIMARY KEY (`idConsulta`),
   FOREIGN KEY (`idPaciente`) REFERENCES `PACIENTE`(`idPaciente`),
   FOREIGN KEY (`idMedico`) REFERENCES `MEDICO`(`idMedico`),
-  FOREIGN KEY (`idFuncionario`) REFERENCES `FUNCIONARIO`(`idFuncionario`),
   FOREIGN KEY (`idEspecialidade`) REFERENCES `ESPECIALIDADE`(`idEspecialidade`)
 );
 
