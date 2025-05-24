@@ -1,13 +1,13 @@
 # Esquema Relacional  <!-- omit in toc -->
 
 - [Relações](#relações)
-  - [Tabela_a](#tabela_a)
+  - [PACIENTE](#PACIENTE)
   - [Tabela_b](#tabela_b)
 - [Vistas](#vistas)
 
 ## Relações
 
-### Tabela_a
+### PACIENTE
 
 #### DESCRIÇÃO <!-- omit in toc -->
 
