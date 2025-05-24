@@ -17,17 +17,17 @@
 
 #### DESCRIÇÃO <!-- omit in toc -->
 
-Tabela que armazena informação dos pacientes da clínica.
+Tabela que armazena os dados dos pacientes da clínica.
 
 #### COLUNAS <!-- omit in toc -->
 
-| Nome           | Descrição                 | Domínio      | por Omissão | Automático | Nulo |
-| :------------- | :------------------------ | :----------- | :---------- | :--------- | :--- |
-| idPaciente     | identificador do paciente | BIGINT       | -           | Sim        | Não  |
-| nome           | nome do paciente          | VARCHAR(50)  | -           | Não        | Não  |
-| dataNascimento | data de nascimento        | DATE         | -           | Não        | Não  |
-| morada         | morada do paciente        | VARCHAR(200) | -           | Não        | Sim  |
-| telefone       | telefone de contacto      | VARCHAR(15)  | -           | Não        | Não  |
+| Nome           | Descrição                       | Domínio      | por Omissão | Automático | Nulo |
+| :------------- | :------------------------------ | :----------- | :---------- | :--------- | :--- |
+| idPaciente     | identificador único do paciente | BIGINT       | -           | Sim        | Não  |
+| nome           | nome do paciente                | VARCHAR(50)  | -           | Não        | Não  |
+| dataNascimento | data de nascimento              | DATE         | -           | Não        | Não  |
+| morada         | morada do paciente              | VARCHAR(200) | -           | Não        | Sim  |
+| telefone       | contacto telefónico             | VARCHAR(15)  | -           | Não        | Não  |
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
 
@@ -41,43 +41,67 @@ Tabela que armazena informação dos pacientes da clínica.
 
 #### DESCRIÇÃO <!-- omit in toc -->
 
-
+Tabela que armazena os dados dos médicos da clínica.
 
 #### COLUNAS <!-- omit in toc -->
 
-
+| Nome     | Descrição                     | Domínio     | por Omissão | Automático | Nulo |
+| :------- | :---------------------------- | :---------- | :---------- | :--------- | :--- |
+| idMedico | identificador único do médico | BIGINT      | -           | Sim        | Não  |
+| nome     | nome do médico                | VARCHAR(50) | -           | Não        | Não  |
+| telefone | contacto telefónico           | VARCHAR(15) | -           | Não        | Não  |
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
 
+- **Chave Primária**: 
 
+| Coluna(s) |
+| --------- |
+| idMedico  |
 
 ### ESPECIALIDADE
 
 #### DESCRIÇÃO <!-- omit in toc -->
 
-
+Especialidades da clínica.
 
 #### COLUNAS <!-- omit in toc -->
 
-
+| Nome            | Descrição                            | Domínio     | por Omissão | Automático | Nulo |
+| :-------------- | :----------------------------------- | :---------- | :---------- | :--------- | :--- |
+| idEspecialidade | identificador único da especialidade | BIGINT      | -           | Sim        | Não  |
+| nome            | nome da especialidade                | VARCHAR(50) | -           | Não        | Não  |
+| duracaoPadrao   | duração padrão de uma consulta       | VARCHAR(15) | -           | Não        | Não  |
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
 
+- **Chave Primária**: 
 
+| Coluna(s)       |
+| --------------- |
+| idEspecialidade |
 
 ### FUNCIONARIO
 
 #### DESCRIÇÃO <!-- omit in toc -->
 
-
+Tabela que armazena os dados dos funcionários da clínica.
 
 #### COLUNAS <!-- omit in toc -->
 
-
+| Nome          | Descrição                          | Domínio      | por Omissão | Automático | Nulo |
+| :------------ | :--------------------------------- | :----------- | :---------- | :--------- | :--- |
+| idFuncionario | identificador único do funcionario | BIGINT       | -           | Sim        | Não  |
+| nome          | nome da especialidade              | VARCHAR(50)  | -           | Não        | Não  |
+| telefone      | contacto telefónico                | VARCHAR(15)  | -           | Não        | Não  |
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
 
+- **Chave Primária**: 
 
+| Coluna(s)     |
+| ------------- |
+| idFuncionario |
 
 ### CONSULTA
 
