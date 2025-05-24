@@ -76,8 +76,8 @@ CREATE TABLE IF NOT EXISTS `HISTORICO_CONSULTA` (
   `dataAlteracao` DATETIME NOT NULL default CURRENT_TIMESTAMP,
   `tipoAlteracao` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`idHistorico`),
-  FOREIGN KEY (`idConsulta`) REFERENCES `CONSULTA`(`idConsulta`)
-  FOREIGN KEY (`idFuncionario`) REFERENCES `FUNCIONARIO`(`idFuncionario`),
+  FOREIGN KEY (`idConsulta`) REFERENCES `CONSULTA`(`idConsulta`),
+  FOREIGN KEY (`idFuncionario`) REFERENCES `FUNCIONARIO`(`idFuncionario`)
 );
 ```
 
