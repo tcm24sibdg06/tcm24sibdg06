@@ -117,7 +117,6 @@ Tabela que armazena os dados das consultas agendadas.
 | idPaciente      | FK para PACIENTE                | BIGINT   | -           | Não        | Não  |
 | idMedico        | FK para MEDICO                  | BIGINT   | -           | Não        | Não  |
 | idEspecialidade | FK para ESPECIALIDADE           | BIGINT   | -           | Não        | Não  |
-| idFuncionario   | FK para FUNCIONARIO             | BIGINT   | -           | Não        | Não  |
 | observacoes     | observações gerais              | TEXT     | -           | Não        | Sim  |
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
@@ -135,7 +134,6 @@ Tabela que armazena os dados das consultas agendadas.
 | paciente_fk      | idPaciente      | PACIENTE            | idPaciente                | Sim     |
 | medico_fk        | idMedico        | MEDICO              | idMedico                  | Sim     |
 | especialidade_fk | idEspecialidade | FUNCIONARIO         | idEspecialidade           | Sim     |
-| funcionario_fk   | idFuncionario   | ESPECIALIDADE       | idFuncionario             | Sim     |
 
 ### REGISTO_CLINICO
 
