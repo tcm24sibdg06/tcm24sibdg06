@@ -17,15 +17,25 @@
 
 #### DESCRIÇÃO <!-- omit in toc -->
 
-
+Tabela que armazena informação dos pacientes da clínica.
 
 #### COLUNAS <!-- omit in toc -->
 
-
+| Nome           | Descrição                 | Domínio      | por Omissão | Automático | Nulo |
+| :------------- | :------------------------ | :----------- | :---------- | :--------- | :--- |
+| idPaciente     | identificador do paciente | BIGINT       | -           | Sim        | Não  |
+| nome           | nome do paciente          | VARCHAR(50)  | -           | Não        | Não  |
+| dataNascimento | data de nascimento        | DATE         | -           | Não        | Não  |
+| morada         | morada do paciente        | VARCHAR(200) | -           | Não        | Sim  |
+| telefone       | telefone de contacto      | VARCHAR(15)  | -           | Não        | Não  |
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
 
+- **Chave Primária**: 
 
+| Coluna(s)  |
+| ---------- |
+| idPaciente |
 
 ### MEDICO
 
