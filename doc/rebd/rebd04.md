@@ -179,7 +179,7 @@ Histórico de alterações e cancelamentos de consultas.
 | idHistorico   | identificador único da alteração | BIGINT      | -           | Sim        | Não  |
 | idConsulta    | FK para CONSULTA                 | BIGINT      | -           | Não        | Não  |
 | idFuncionario | FK para FUNCIONARIO              | BIGINT      | -           | Não        | Não  |
-| dataAlteracao | data e hora da alteração         | DATETIME    | now()       | Não        | Não  |
+| dataAlteracao | data da alteração                | DATE        | now()       | Não        | Não  |
 | tipoAlteracao | tipo de alteração                | VARCHAR(50) | -           | Não        | Não  |
 
 #### RESTRIÇÕES DE INTEGRIDADE <!-- omit in toc -->
