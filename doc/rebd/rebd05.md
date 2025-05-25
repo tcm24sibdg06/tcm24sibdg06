@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `HISTORICO_CONSULTA` (
   `idHistorico` BIGINT unsigned NOT NULL AUTO_INCREMENT,
   `idConsulta` BIGINT unsigned NOT NULL,
   `idFuncionario` BIGINT unsigned NOT NULL,
-  `dataAlteracao` DATETIME NOT NULL default CURRENT_TIMESTAMP,
+  `dataAlteracao` DATE NOT NULL default CURRENT_DATE,
   `tipoAlteracao` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`idHistorico`),
   FOREIGN KEY (`idConsulta`) REFERENCES `CONSULTA`(`idConsulta`),
