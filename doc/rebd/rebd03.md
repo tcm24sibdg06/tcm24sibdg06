@@ -12,6 +12,12 @@ HISTORICO_CONSULTA(idHistorico PK, idConsulta FK, idFuncionario FK, tipoAlteraca
 
 ## Normalização do Esquema Relacional
 
-
+Todas as relações já se apresentam em 4FN.
+  -1FN: Todos os atributos são atómicos.
+  -2FN: Tem chave primária simples, e todos os atributos dependem totalmente dela.
+  -3FN: Não há dependências transitivas.
+  -BCNF: Todas as dependências funcionais têm a chave como determinante.
+  -4FN: Não há dependências multivaloradas.
+  
 ---
 [< Previous](rebd02.md) | [^ Main](/../../) | [Next >](rebd04.md)
