@@ -8,7 +8,10 @@ Os pacientes também terão identificação única e poderão agendar consultas 
 Funcionários como rececionistas e gestores de agenda vão ter ferramentas intuitivas para realizarem as suas funções com maior eficiência. A base de dados do sistema tem de ser segura, confiável e só pode ser acedida apenas por pessoas autorizadas, assim vai possibilitar o registo detalhado do histórico clínico e vai garantir acesso rápido à respetiva informação. O objetivo final é melhorar a qualidade do atendimento, ter menos erros administrativos e aumentar a eficiência dos processos internos da clínica.
 
 ## Descrição dos requisitos do utilizador
-Assim, os funcionários poderão ter acesso às seguintes funcionalidades: marcação, remarcação e cancelamento das consultas; dados das consultas, pacientes, médicos e especialidades, registo clínico; histórico de consultas. Os médicos poderão ter acesso às seguintes funcionalidades: marcação, remarcação e cancelamento das consultas; visualização dos pacientes em espera; registo clínico; dados das consultas, pacientes e especialidades. Os pacientes poderão ter acesso às seguintes funcionalidades: check in; marcação, remarcação e cancelamento das consultas
+As opções disponíveis no sistema da clinica médica dependerão da função de cada pessoa ao aceder ao sistema.
+Assim, os funcionários poderão ter acesso às seguintes funcionalidades: marcação, remarcação e cancelamento das consultas; dados das consultas, pacientes, médicos e especialidades, registo clínico; histórico de consultas.
+Os médicos poderão ter acesso às seguintes funcionalidades: marcação, remarcação e cancelamento das consultas; visualização dos pacientes em espera; registo clínico; dados das consultas, pacientes e especialidades.
+Os pacientes poderão ter acesso às seguintes funcionalidades: check in; marcação, remarcação e cancelamento das consultas
 
 
 ---
