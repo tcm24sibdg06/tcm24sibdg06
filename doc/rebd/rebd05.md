@@ -152,7 +152,7 @@ FROM REGISTO_CLINICO
 WHERE idConsulta = 542;
 ```
 
-Apresenta o registo clínico de uma consulta específica(o número 542 é meramente ilustrativo).
+Apresenta o registo clínico de uma consulta específica (o número 542 é meramente ilustrativo).
 
 ####  Listar todas as consultas marcadas para "hoje"
 
@@ -162,10 +162,7 @@ FROM CONSULTA
 WHERE DATE(dataHora) = CURRENT_DATE;
 ```
 
-Apresenta as consultas marcadas para o dia "atual"
-
-
-
+Apresenta as consultas marcadas para o dia "atual".
 
 ---
 [< Previous](rebd04.md) | [^ Main](/../../) | Next >
