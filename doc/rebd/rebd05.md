@@ -107,7 +107,7 @@ FROM FUNCIONARIO;
 
 Apresenta todos os dados dos funcionarios existentes na base de dados. Verifica se os funcionarios estão a ser corretamente armazenados.
 
-#### Listar todos as consultas da clínica
+#### Listar todas as consultas da clínica
 
 ```sql
 SELECT *
