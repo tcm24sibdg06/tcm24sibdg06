@@ -134,20 +134,35 @@ FROM HISTORICO_CONSULTA
 
 Apresenta todos os dados do histórico de consultas existente na base de dados. Verifica se as alterações feitas às consultas estão a ser corretamente armazenadas.
 
+#### Analisar o histórico de alterações de uma consulta específica
 
+```sql
+SELECT *
+FROM HISTORICO_CONSULTA
+WHERE idConsulta = 542;
+```
 
+Apresenta todas as alterações feitas a uma consulta específica (o número 542 é meramente ilustrativo).
 
+#### Analisar os registos clínicos de uma determinada consulta
 
+```sql
+SELECT * 
+FROM REGISTO_CLINICO 
+WHERE idConsulta = 542;
+```
 
+Apresenta o registo clínico de uma consulta específica(o número 542 é meramente ilustrativo).
 
+####  Listar todas as consultas marcadas para "hoje"
 
+```sql
+SELECT *
+FROM CONSULTA
+WHERE DATE(dataHora) = CURRENT_DATE;
+```
 
-
-
-
-
-
-
+Apresenta as consultas marcadas para o dia "atual"
 
 
 
