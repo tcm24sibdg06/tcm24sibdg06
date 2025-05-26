@@ -200,7 +200,76 @@ Histórico de alterações e cancelamentos de consultas.
 
 ## Vistas
 
+#### ConsultasFuturas
+Mostra todas as consultas agendadas.
 
+```sql
+CREATE VIEW ConsultasFuturas AS
+SELECT c.*, p.nome AS nomePaciente, m.nome AS nomeMedico
+FROM CONSULTA c
+JOIN PACIENTE p ON c.idPaciente = p.idPaciente
+JOIN MEDICO m ON c.idMedico = m.idMedico
+WHERE c.dataHora > CURRENT_TIMESTAMP;
+```
+
+#### ConsultasCanceladas
+Mostra todas as consultas canceladas.
+
+```sql
+CREATE VIEW ConsultasCanceladas AS
+SELECT hc.*, p.nome AS nomePaciente, m.nome AS nomeMedico
+FROM HISTORICO_CONSULTA hc
+JOIN CONSULTA c ON hc.idConsulta = c.idConsulta
+JOIN PACIENTE p ON c.idPaciente = p.idPaciente
+JOIN MEDICO m ON c.idMedico = m.idMedico
+WHERE hc.tipoAlteracao = 'cancelada';
+```
+
+#### ConsultasPorEspecialidade
+Mostra todas as consultas feitas por especialidade.
+
+```sql
+CREATE VIEW ConsultasPorEspecialidade AS
+SELECT e.nome AS especialidade, COUNT(*) AS totalConsultas
+FROM CONSULTA c
+JOIN ESPECIALIDADE e ON c.idEspecialidade = e.idEspecialidade
+GROUP BY e.nome;
+```
+
+#### ConsultasPorMedico
+Mostra todas as consultas feitas por médico.
+
+```sql
+CREATE VIEW ConsultasPorMedico AS
+SELECT m.nome AS especialidade, COUNT(*) AS totalConsultas
+FROM CONSULTA c
+JOIN MEDICO m ON c.idEspecialidade = m.idEspecialidade
+GROUP BY m.nome;
+```
+
+#### ConsultasPorPaciente
+Mostra todas as consultas feitas por paciente.
+
+```sql
+CREATE VIEW ConsultasPorPaciente AS
+SELECT p.nome AS paciente, COUNT(*) AS totalConsultas
+FROM CONSULTA c
+JOIN PACIENTE p ON c.idEspecialidade = p.idPaciente
+GROUP BY p.nome;
+```
+
+#### HistoricoCompletoPaciente
+Mostra uma visão completa do histórico de um paciente.
+
+```sql
+CREATE VIEW HistoricoCompletoPaciente AS
+SELECT p.nome AS nomePaciente, c.dataHora, rc.sintomas, rc.diagnostico, rc.tratamento,
+       hc.dataAlteracao, hc.tipoAlteracao, hc.motivo
+FROM PACIENTE p
+JOIN CONSULTA c ON p.idPaciente = c.idPaciente
+LEFT JOIN REGISTO_CLINICO rc ON c.idConsulta = rc.idConsulta
+LEFT JOIN HISTORICO_CONSULTA hc ON c.idConsulta = hc.idConsulta;
+```
 
 ---
 | [< Previous](rebd03.md) | [^ Main](/../../) | [Next >](rebd05.md) |
