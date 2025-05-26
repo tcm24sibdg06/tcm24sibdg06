@@ -136,5 +136,21 @@ Apresenta todos os dados do histórico de consultas existente na base de dados. 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 [< Previous](rebd04.md) | [^ Main](/../../) | Next >
