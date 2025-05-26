@@ -80,6 +80,59 @@ CREATE TABLE IF NOT EXISTS `HISTORICO_CONSULTA` (
 ```
 
 ## DML
+#### Listar todos os pacientes registados na clínica
+
+```sql
+SELECT *
+FROM PACIENTE;
+```
+
+Apresenta todos os dados dos pacientes existentes na base de dados. Verifica se os pacientes estão a ser corretamente armazenados.
+
+#### Listar todos os médicos que trabalham na clínica
+
+```sql
+SELECT *
+FROM MEDICO;
+```
+
+Apresenta todos os dados dos médicos existentes na base de dados. Verifica se os médicos estão a ser corretamente armazenados.
+
+#### Listar todos os funcionarios registados na clínica
+
+```sql
+SELECT *
+FROM FUNCIONARIO;
+```
+
+Apresenta todos os dados dos funcionarios existentes na base de dados. Verifica se os funcionarios estão a ser corretamente armazenados.
+
+#### Listar todos as consultas da clínica
+
+```sql
+SELECT *
+FROM CONSULTA;
+```
+
+Apresenta todos os dados das consultas existentes na base de dados. Verifica se as consultas estão a ser corretamente armazenados.
+
+#### Verificar o registo clínico
+
+```sql
+SELECT *
+FROM REGISTO_CLINICO;
+```
+
+Apresenta todos os dados do registo clínico existente na base de dados. Verifica se o registo clínico está a ser corretamente armazenados.
+
+#### Verificar o histórico de consultas
+
+```sql
+SELECT *
+FROM HISTORICO_CONSULTA
+```
+
+Apresenta todos os dados do histórico de consultas existente na base de dados. Verifica se as alterações feitas às consultas estão a ser corretamente armazenadas.
 
 
 
