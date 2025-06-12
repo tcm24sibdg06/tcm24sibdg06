@@ -9,11 +9,13 @@ de serviços prestados, a gestão de consultas, dos registos clínicos e da comu
 funcionários e médicos ainda é feita de forma manual. Isto tem causado uma série de problemas,
 como marcações duplicadas, conflitos de horários entre médicos e pacientes, perda de dados
 clínicos e atrasos significativos no atendimento ao público.
+
 Cada médico da clínica está associado a uma ou mais especialidades e é identificado por um
 código único e pelo seu nome. As especialidades, por sua vez, têm durações específicas para
 cada tipo de consulta, o que influencia diretamente a gestão dos horários. É essencial que o
 sistema a ser desenvolvido respeite essas durações, de forma a evitar a sobreposição de
 marcações e a garantir uma melhor organização da agenda dos profissionais de saúde.
+
 Os pacientes são igualmente identificados por um código único, nome completo, morada, data
 de nascimento e número de telemóvel. Cada paciente pode marcar consultas com diferentes
 médicos, de acordo com a sua necessidade. Cada consulta deve conter, obrigatoriamente, a
@@ -26,12 +28,14 @@ colocado em utilização um novo sistema digital, quer-se agilizar esse processo
 paciente realizar e der entrada na receção, o sistema terá automaticamente de notificar o
 médico encarregado da consulta que o seu paciente já chegou, dando um alerta no seu
 computador. Isso permitirá uma gestão melhor do tempo em si.
+
 Para além das funções apresentadas, o sistema deverá deixar fazer o reagendamento e o
 cancelamento de consultas de forma flexível, sempre marcando automaticamente as alterações
 efetuadas. Esta funcionalidade é muito importante para manter o histórico atualizado das
 marcações e facilitar a gestão da disponibilidade dos profissionais de saúde. É também
 importante que o sistema deixe consultar o histórico de alterações para cada consulta, de forma
 que deixe ver o registo dos dados.
+
 Outro componente essencial da clínica são os funcionários, responsáveis pelo apoio à gestão
 das tarefas diárias. Estes colaboradores estão ligados à unidade e identificados por nome, código
 de funcionário e a função que desempenham, como rececionistas, assistentes administrativos
