@@ -49,7 +49,16 @@ objetivo melhorar a qualidade do atendimento, reduzir erros administrativos e ot
 processos internos da clínica. 
 
 ## Modelação do problema
+Para a modelação do problema, foram assumidos os seguintes pressupostos:
 
+* Cada paciente pode agendar múltiplas consultas com diferentes médicos.
+* Cada médico pode estar associado a uma ou mais especialidades.
+* Cada especialidade tem uma duração específica para as consultas, que deve ser respeitada.
+* O check-in dos pacientes será automatizado, avisando os médicos quando os pacientes chegarem à clínica.
+* O sistema deve permitir o reagendamento e cancelamento de consultas, mantendo um histórico de todas as alterações.
+* Os funcionários da clínica devem ter acesso a uma interface intuitiva para gerir consultas e registos clínicos.
+* O histórico de consultas dos pacientes deve ser mantido de forma detalhada, registando todas as consultas e interações.
+* Não deve ser permitido agendar duas consultas para o mesmo médico no mesmo horário.
 
 ---
 [< Previous](rei00.md) | [^ Main](/../../) | [Next >](rei02.md)
