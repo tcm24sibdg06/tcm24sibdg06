@@ -11,7 +11,7 @@
 
 ## Problemas Enfrentados e Soluções
 
-### Relação 1:N entre 'Consulta' e 'HistóricoConsulta'
+### Relação 1:N entre Consulta e HistóricoConsulta
 
 **Problema:**
 
@@ -21,7 +21,7 @@ Na criação desta relação foi cometido um erro ao identificar a chave estrang
 
 Foi necessário remover a relação manualmente e recriá-la com o nome da chave estrangeira corrigido.
 
-### Entidade 'HistóricoConsulta'
+### Entidade HistóricoConsulta
 
 **Problema:**
 
@@ -29,7 +29,7 @@ Esta entidade não deve ser manipulada manualmente, uma vez que apresenta um his
 
 **Solução:**
 
-Implementar apenas endpoints do tipo GET.
+Implementar apenas endpoints do tipo `GET`.
 
 ---
 
