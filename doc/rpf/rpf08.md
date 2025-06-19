@@ -23,9 +23,9 @@ Inclui apenas `GET` e `POST` uma vez que são os principais métodos que seriam 
 | `GET /pacientes/:id` | Ver paciente por id |
 | `POST /pacientes`| Criar paciente |
 
-![Paciente1](images/paciente 1.png)
+![Paciente1](images/paciente1.png)
 
-![Paciente2](images/paciente 2.png)
+![Paciente2](images/paciente2.png)
 
-![Paciente3](images/paciente 3.png)
+![Paciente3](images/paciente3.png)
 
