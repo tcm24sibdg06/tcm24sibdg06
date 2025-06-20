@@ -62,7 +62,7 @@ Inclui apenas `GET` e `POST` uma vez que são os principais métodos que seriam 
 | Endpoint | Justificação |
 |----------|--------------|
 | `GET /especialidades` | Listar especialidades |
-| `POST /pacientes`| Criar especialidade |
+| `POST /especialidades`| Criar especialidade |
 
 ![Especialidade1](images/especialidade1.png)
 
