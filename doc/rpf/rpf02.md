@@ -20,7 +20,7 @@
 * Tem (PACIENTE, CONSULTA)
 * Altera (FUNCIONARIO, HISTORICO_CONSULTA)
 
-![Modelo E/A](doc/rei/images/image01.png)   
+![Modelo E/A](images/image01.png)   
 
 #### Paciente
 Representa um utente da clínica. Cada paciente possui um código único (idPaciente), assim como o seu nome, morada, data de nascimento e contacto. Esta entidade armazena as informações necessárias para agendar e associar consultas a cada indivíduo.
