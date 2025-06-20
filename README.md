@@ -7,6 +7,7 @@ Pretendemos com este sistema de base de dados melhorar a gestão de uma clínica
 ## Relatórios
 :[REI](doc/rei/rei00.md)
 :[REBD](doc/rebd/rebd00.md)
+:[RPF](doc/rpf/rpf00.md)
 
 ## Equipa
 * [@BernardoAzevedo](https://github.com/Bernardo-Azevedo-045200)
