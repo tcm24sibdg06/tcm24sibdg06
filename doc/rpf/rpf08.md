@@ -92,7 +92,7 @@ Inclui os métodos CRUD `GET`, `POST`, `PATCH` e `DELETE`
 
 ### REGISTO_CLINICO
 
-Inclui apenas `GET` e `POST` uma vez que são os principais métodos que seriam utilizados. Poderia também ser utilizado o método CRUD `PATCH` mas seria utilizado muito esporádicamente.
+Inclui apenas `GET` uma vez que é o único método CRUD útil para esta entidade.
 
 | Endpoint | Justificação |
 |----------|--------------|
@@ -102,7 +102,7 @@ Inclui apenas `GET` e `POST` uma vez que são os principais métodos que seriam 
 
 ### HISTORICO_CONSULTA
 
-Inclui apenas `GET` e `POST` uma vez que são os principais métodos que seriam utilizados. Poderia também ser utilizado o método CRUD `PATCH` mas seria utilizado muito esporádicamente.
+Inclui apenas `GET` uma vez que é o único método CRUD útil para esta entidade.
 
 | Endpoint | Justificação |
 |----------|--------------|
