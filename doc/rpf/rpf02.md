@@ -51,4 +51,4 @@ Contém o histórico completo de consultas de cada paciente, médico e especiali
 - A chegada do paciente deve notificar automaticamente o médico.
 
 ---
-[< Previous](rebd01.md) | [^ Main](/../../) | [Next >](rebd03.md)
+[< Previous](rpf01.md) | [^ Main](/../../) | [Next >](rpf03.md)
