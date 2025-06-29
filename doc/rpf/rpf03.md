@@ -31,4 +31,4 @@ Todas as relações já se apresentam em 4FN.
   -4FN: Não há dependências multivaloradas.
   
 ---
-[< Previous](rebd02.md) | [^ Main](/../../) | [Next >](rebd04.md)
+[< Previous](rpf02.md) | [^ Main](/../../) | [Next >](rpf04.md)
