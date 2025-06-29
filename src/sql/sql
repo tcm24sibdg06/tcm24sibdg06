@@ -1,1 +1,312 @@
-sdawsfaa
+USE `clinica`;
+
+DROP TABLE IF EXISTS `paciente`;
+DROP TABLE IF EXISTS `medico`;
+DROP TABLE IF EXISTS `especialidade`;
+DROP TABLE IF EXISTS `funcionario`;
+DROP TABLE IF EXISTS `consulta`;
+DROP TABLE IF EXISTS `registo_clinica`;
+DROP TABLE IF EXISTS `historico_consulta`;
+
+CREATE TABLE IF NOT EXISTS PACIENTE (
+  `idPaciente` BIGINT unsigned NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(50) NOT NULL,
+  `dataNascimento` DATE NOT NULL,
+  `morada` VARCHAR(200) default NULL,
+  `telefone` VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`idPaciente`)
+);
+
+CREATE TABLE IF NOT EXISTS MEDICO (
+  `idMedico` BIGINT unsigned NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(50) NOT NULL,
+  `telefone` VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`idMedico`)
+);
+
+CREATE TABLE IF NOT EXISTS ESPECIALIDADE (
+  `idEspecialidade` BIGINT unsigned NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(50) NOT NULL,
+  `duracaoPadrao` INT NOT NULL,
+  PRIMARY KEY (`idEspecialidade`)
+);
+
+CREATE TABLE IF NOT EXISTS FUNCIONARIO (
+  `idFuncionario` BIGINT unsigned NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(50) NOT NULL,
+  `telefone` VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`idFuncionario`)
+);
+
+CREATE TABLE IF NOT EXISTS CONSULTA (
+  `idConsulta` BIGINT unsigned NOT NULL AUTO_INCREMENT,
+  `dataHora` DATETIME NOT NULL,
+  `idPaciente` BIGINT unsigned NOT NULL,
+  `idMedico` BIGINT unsigned NOT NULL,
+  `idEspecialidade` BIGINT unsigned NOT NULL,
+  `observacoes` TEXT default NULL,
+  PRIMARY KEY (`idConsulta`),
+  FOREIGN KEY (`idPaciente`) REFERENCES `PACIENTE`(`idPaciente`),
+  FOREIGN KEY (`idMedico`) REFERENCES `MEDICO`(`idMedico`),
+  FOREIGN KEY (`idEspecialidade`) REFERENCES `ESPECIALIDADE`(`idEspecialidade`)
+);
+
+CREATE TABLE IF NOT EXISTS REGISTO_CLINICO (
+  `idRegistoClinico` BIGINT unsigned NOT NULL AUTO_INCREMENT,
+  `idPaciente` BIGINT unsigned NOT NULL,
+  `idMedico` BIGINT unsigned NOT NULL,
+  `dataHora` DATETIME NOT NULL,
+  `descricao` TEXT NOT NULL,
+  PRIMARY KEY (`idRegistoClinico`),
+  FOREIGN KEY (`idPaciente`) REFERENCES `PACIENTE`(`idPaciente`),
+  FOREIGN KEY (`idMedico`) REFERENCES `MEDICO`(`idMedico`)
+);
+
+CREATE TABLE IF NOT EXISTS HISTORICO_CONSULTA (
+  `idHistorico` BIGINT unsigned NOT NULL AUTO_INCREMENT,
+  `idConsulta` BIGINT unsigned NOT NULL,
+  `idFuncionario` BIGINT unsigned NOT NULL,
+  `dataAlteracao` DATETIME NOT NULL default CURRENT_TIMESTAMP,
+  `tipoAlteracao` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`idHistorico`),
+  FOREIGN KEY (`idConsulta`) REFERENCES `CONSULTA`(`idConsulta`),
+  FOREIGN KEY (`idFuncionario`) REFERENCES `FUNCIONARIO`(`idFuncionario`)
+);
+
+-- Inserts Paciente
+INSERT INTO paciente (nome, dataNascimento, morada, telefone) 
+VALUES 
+('Nome1', '2000-01-01', 'morada1', '912345678'),
+('Nome2', '2000-02-02', 'morada2', '912345679'),
+('Nome3', '2000-03-03', 'morada3', '912345689'),
+('Nome4', '2000-04-04', 'morada4', '912345688'),
+('Nome5', '2000-05-05', 'morada5', '912345687'),
+('Nome6', '2000-06-06', 'morada6', '912345686'),
+('Nome7', '2000-07-07', 'morada7', '912345685'),
+('Nome8', '2000-08-08', 'morada8', '912345684'),
+('Nome9', '2000-09-09', 'morada9', '912345683'),
+('Nome10', '2000-10-10', 'morada10', '912345682'),
+('Nome11', '2000-11-11', 'morada11', '912345681'),
+('Nome12', '2000-12-12', 'morada12', '912345680'),
+('Nome13', '2001-01-13', 'morada13', '912345679'),
+('Nome14', '2001-02-14', 'morada14', '912345678'),
+('Nome15', '2001-03-15', 'morada15', '912345677'),
+('Nome16', '2001-04-16', 'morada16', '912345676'),
+('Nome17', '2001-05-17', 'morada17', '912345675'),
+('Nome18', '2001-06-18', 'morada18', '912345674'),
+('Nome19', '2001-07-19', 'morada19', '912345673'),
+('Nome20', '2001-08-20', 'morada20', '912345672'),
+('Nome21', '2001-09-21', 'morada21', '912345671'),
+('Nome22', '2001-10-22', 'morada22', '912345670'),
+('Nome23', '2001-11-23', 'morada23', '912345669'),
+('Nome24', '2001-12-24', 'morada24', '912345668'),
+('Nome25', '2002-01-25', 'morada25', '912345667'),
+('Nome26', '2002-02-26', 'morada26', '912345666'),
+('Nome27', '2002-03-27', 'morada27', '912345665'),
+('Nome28', '2002-04-28', 'morada28', '912345664'),
+('Nome29', '2002-05-29', 'morada29', '912345663'),
+('Nome30', '2002-06-30', 'morada30', '912345662');
+
+-- Inserts Medico
+INSERT INTO medico (nome, telefone)
+VALUES
+('Nome1', '987654321'),
+('Nome2', '987654322'),
+('Nome3', '987654323'),
+('Nome4', '987654324'),
+('Nome5', '987654325'),
+('Nome6', '987654326'),
+('Nome7', '987654327'),
+('Nome8', '987654328'),
+('Nome9', '987654329'),
+('Nome10', '987654330'),
+('Nome11', '987654331'),
+('Nome12', '987654332'),
+('Nome13', '987654333'),
+('Nome14', '987654334'),
+('Nome15', '987654335'),
+('Nome16', '987654336'),
+('Nome17', '987654337'),
+('Nome18', '987654338'),
+('Nome19', '987654339'),
+('Nome20', '987654340'),
+('Nome21', '987654341'),
+('Nome22', '987654342'),
+('Nome23', '987654343'),
+('Nome24', '987654344'),
+('Nome25', '987654345'),
+('Nome26', '987654346'),
+('Nome27', '987654347'),
+('Nome28', '987654348'),
+('Nome29', '987654349'),
+('Nome30', '987654350');
+
+-- Inserts Especialidade
+INSERT INTO especialidade (nome, duracaoPadrao)
+VALUES
+('Especialidade1', 30),
+('Especialidade2', 45),
+('Especialidade3', 20),
+('Especialidade4', 60),
+('Especialidade5', 25),
+('Especialidade6', 40),
+('Especialidade7', 35),
+('Especialidade8', 50),
+('Especialidade9', 30),
+('Especialidade10', 45),
+('Especialidade11', 20),
+('Especialidade12', 60),
+('Especialidade13', 25),
+('Especialidade14', 40),
+('Especialidade15', 35),
+('Especialidade16', 50),
+('Especialidade17', 30),
+('Especialidade18', 45),
+('Especialidade19', 20),
+('Especialidade20', 60),
+('Especialidade21', 25),
+('Especialidade22', 40),
+('Especialidade23', 35),
+('Especialidade24', 50),
+('Especialidade25', 30),
+('Especialidade26', 45),
+('Especialidade27', 20),
+('Especialidade28', 60),
+('Especialidade29', 25),
+('Especialidade30', 40);
+
+-- Inserts Funcionario
+INSERT INTO funcionario (nome, telefone)
+VALUES
+('Nome1', '965000001'),
+('Nome2', '965000002'),
+('Nome3', '965000003'),
+('Nome4', '965000004'),
+('Nome5', '965000005'),
+('Nome6', '965000006'),
+('Nome7', '965000007'),
+('Nome8', '965000008'),
+('Nome9', '965000009'),
+('Nome10', '965000010'),
+('Nome11', '965000011'),
+('Nome12', '965000012'),
+('Nome13', '965000013'),
+('Nome14', '965000014'),
+('Nome15', '965000015'),
+('Nome16', '965000016'),
+('Nome17', '965000017'),
+('Nome18', '965000018'),
+('Nome19', '965000019'),
+('Nome20', '965000020'),
+('Nome21', '965000021'),
+('Nome22', '965000022'),
+('Nome23', '965000023'),
+('Nome24', '965000024'),
+('Nome25', '965000025'),
+('Nome26', '965000026'),
+('Nome27', '965000027'),
+('Nome28', '965000028'),
+('Nome29', '965000029'),
+('Nome30', '965000030');
+
+-- Inserts Consulta
+INSERT INTO consulta (dataHora, idPaciente, idMedico, idEspecialidade, observacoes)
+VALUES
+('2025-07-01 09:00:00', 1, 1, 1, 'Consulta inicial'),
+('2025-07-01 10:00:00', 2, 2, 2, 'Revisão'),
+('2025-07-01 11:00:00', 3, 3, 3, 'Queixa de dor'),
+('2025-07-02 09:30:00', 4, 4, 4, NULL),
+('2025-07-02 10:30:00', 5, 5, 5, 'Consulta de rotina'),
+('2025-07-02 11:30:00', 6, 6, 6, 'Consulta pós-operatória'),
+('2025-07-03 09:00:00', 7, 7, 7, NULL),
+('2025-07-03 10:00:00', 8, 8, 8, 'Urgência'),
+('2025-07-03 11:00:00', 9, 9, 9, NULL),
+('2025-07-04 09:00:00', 10, 10, 10, 'Consulta especial'),
+('2025-07-04 10:00:00', 11, 11, 11, NULL),
+('2025-07-04 11:00:00', 12, 12, 12, 'Consulta de seguimento'),
+('2025-07-05 09:30:00', 13, 13, 13, NULL),
+('2025-07-05 10:30:00', 14, 14, 14, 'Reavaliação'),
+('2025-07-05 11:30:00', 15, 15, 15, NULL),
+('2025-07-06 09:00:00', 16, 16, 16, NULL),
+('2025-07-06 10:00:00', 17, 17, 17, 'Queixa de dor'),
+('2025-07-06 11:00:00', 18, 18, 18, NULL),
+('2025-07-07 09:00:00', 19, 19, 19, NULL),
+('2025-07-07 10:00:00', 20, 20, 20, NULL),
+('2025-07-07 11:00:00', 21, 21, 21, 'Consulta especial'),
+('2025-07-08 09:00:00', 22, 22, 22, NULL),
+('2025-07-08 10:00:00', 23, 23, 23, NULL),
+('2025-07-08 11:00:00', 24, 24, 24, NULL),
+('2025-07-09 09:00:00', 25, 25, 25, NULL),
+('2025-07-09 10:00:00', 26, 26, 26, NULL),
+('2025-07-09 11:00:00', 27, 27, 27, 'Consulta inicial'),
+('2025-07-10 09:00:00', 28, 28, 28, NULL),
+('2025-07-10 10:00:00', 29, 29, 29, NULL),
+('2025-07-10 11:00:00', 30, 30, 30, 'Consulta de emergência');
+
+-- Inserts Registo Clinico
+INSERT INTO registo_clinico (idPaciente, idMedico, dataHora, descricao)
+VALUES
+(1, 1, '2025-07-01 09:00:00', 'Registo clínico 1'),
+(2, 2, '2025-07-01 09:30:00', 'Registo clínico 2'),
+(3, 3, '2025-07-01 10:00:00', 'Registo clínico 3'),
+(4, 4, '2025-07-01 10:30:00', 'Registo clínico 4'),
+(5, 5, '2025-07-01 11:00:00', 'Registo clínico 5'),
+(6, 6, '2025-07-01 11:30:00', 'Registo clínico 6'),
+(7, 7, '2025-07-02 09:00:00', 'Registo clínico 7'),
+(8, 8, '2025-07-02 09:30:00', 'Registo clínico 8'),
+(9, 9, '2025-07-02 10:00:00', 'Registo clínico 9'),
+(10, 10, '2025-07-02 10:30:00', 'Registo clínico 10'),
+(11, 11, '2025-07-02 11:00:00', 'Registo clínico 11'),
+(12, 12, '2025-07-03 09:00:00', 'Registo clínico 12'),
+(13, 13, '2025-07-03 09:30:00', 'Registo clínico 13'),
+(14, 14, '2025-07-03 10:00:00', 'Registo clínico 14'),
+(15, 15, '2025-07-03 10:30:00', 'Registo clínico 15'),
+(16, 16, '2025-07-03 11:00:00', 'Registo clínico 16'),
+(17, 17, '2025-07-04 09:00:00', 'Registo clínico 17'),
+(18, 18, '2025-07-04 09:30:00', 'Registo clínico 18'),
+(19, 19, '2025-07-04 10:00:00', 'Registo clínico 19'),
+(20, 20, '2025-07-04 10:30:00', 'Registo clínico 20'),
+(21, 21, '2025-07-04 11:00:00', 'Registo clínico 21'),
+(22, 22, '2025-07-05 09:00:00', 'Registo clínico 22'),
+(23, 23, '2025-07-05 09:30:00', 'Registo clínico 23'),
+(24, 24, '2025-07-05 10:00:00', 'Registo clínico 24'),
+(25, 25, '2025-07-05 10:30:00', 'Registo clínico 25'),
+(26, 26, '2025-07-05 11:00:00', 'Registo clínico 26'),
+(27, 27, '2025-07-06 09:00:00', 'Registo clínico 27'),
+(28, 28, '2025-07-06 09:30:00', 'Registo clínico 28'),
+(29, 29, '2025-07-06 10:00:00', 'Registo clínico 29'),
+(30, 30, '2025-07-06 10:30:00', 'Registo clínico 30');
+
+-- Inserts Historico Consulta
+INSERT INTO historico_consulta (idConsulta, idFuncionario, dataAlteracao, tipoAlteracao)
+VALUES
+(1, 1, '2025-07-01 09:00:00', 'criação'),
+(2, 2, '2025-07-01 09:15:00', 'edição'),
+(3, 3, '2025-07-01 09:30:00', 'cancelamento'),
+(4, 4, '2025-07-01 09:45:00', 'criação'),
+(5, 5, '2025-07-01 10:00:00', 'edição'),
+(6, 6, '2025-07-01 10:15:00', 'criação'),
+(7, 7, '2025-07-02 09:00:00', 'edição'),
+(8, 8, '2025-07-02 09:15:00', 'criação'),
+(9, 9, '2025-07-02 09:30:00', 'cancelamento'),
+(10, 10, '2025-07-02 09:45:00', 'edição'),
+(11, 11, '2025-07-02 10:00:00', 'criação'),
+(12, 12, '2025-07-03 09:00:00', 'criação'),
+(13, 13, '2025-07-03 09:15:00', 'edição'),
+(14, 14, '2025-07-03 09:30:00', 'criação'),
+(15, 15, '2025-07-03 09:45:00', 'cancelamento'),
+(16, 16, '2025-07-03 10:00:00', 'edição'),
+(17, 17, '2025-07-04 09:00:00', 'criação'),
+(18, 18, '2025-07-04 09:15:00', 'criação'),
+(19, 19, '2025-07-04 09:30:00', 'edição'),
+(20, 20, '2025-07-04 09:45:00', 'criação'),
+(21, 21, '2025-07-04 10:00:00', 'cancelamento'),
+(22, 22, '2025-07-05 09:00:00', 'criação'),
+(23, 23, '2025-07-05 09:15:00', 'edição'),
+(24, 24, '2025-07-05 09:30:00', 'edição'),
+(25, 25, '2025-07-05 09:45:00', 'criação'),
+(26, 26, '2025-07-05 10:00:00', 'cancelamento'),
+(27, 27, '2025-07-06 09:00:00', 'criação'),
+(28, 28, '2025-07-06 09:15:00', 'criação'),
+(29, 29, '2025-07-06 09:30:00', 'edição'),
+(30, 30, '2025-07-06 09:45:00', 'criação');
