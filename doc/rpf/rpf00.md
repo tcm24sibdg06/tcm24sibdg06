@@ -15,4 +15,4 @@
 ---
 
 
-< Previous | [^ Main](/../../) | [Next >](rpf01.md)
+[^ Main](/../../) | [Next >](rpf01.md)
