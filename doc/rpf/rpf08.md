@@ -114,4 +114,4 @@ Inclui apenas `GET` uma vez que é o único método CRUD útil para esta entidad
 ![Historico_Consultas2](images/historicoconsultas2.png)
 
 ---
-[< Previous](rpf07.md) | [^ Main](/../../) | Next >
+[< Previous](rpf07.md) | [^ Main](/../../)
