@@ -21,4 +21,4 @@ Os pacientes poderão ter acesso às seguintes funcionalidades: check in; marca�
 
 
 ---
-[< Previous](rebd00.md) | [^ Main](/../../) | [Next >](rpf02.md)
+[< Previous](rpf00.md) | [^ Main](/../../) | [Next >](rpf02.md)
