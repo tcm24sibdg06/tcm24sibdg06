@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+tslib_1.__exportStar(require("./consulta-controller.controller"), exports);
+tslib_1.__exportStar(require("./especialidade-controller.controller"), exports);
+tslib_1.__exportStar(require("./funcionario-controller.controller"), exports);
+tslib_1.__exportStar(require("./historico-consulta-controller.controller"), exports);
+tslib_1.__exportStar(require("./medico-controller.controller"), exports);
+tslib_1.__exportStar(require("./paciente-controller.controller"), exports);
+tslib_1.__exportStar(require("./ping.controller"), exports);
+tslib_1.__exportStar(require("./registo-clinico-controller.controller"), exports);
+tslib_1.__exportStar(require("./consulta-paciente.controller"), exports);
+tslib_1.__exportStar(require("./consulta-medico.controller"), exports);
+tslib_1.__exportStar(require("./consulta-especialidade.controller"), exports);
+tslib_1.__exportStar(require("./registo-clinico-medico.controller"), exports);
+tslib_1.__exportStar(require("./registo-clinico-paciente.controller"), exports);
+tslib_1.__exportStar(require("./historico-consulta-consulta.controller"), exports);
+tslib_1.__exportStar(require("./historico-consulta-funcionario.controller"), exports);
+tslib_1.__exportStar(require("./consulta-historico-consulta.controller"), exports);
+tslib_1.__exportStar(require("./consulta-registo-clinico.controller"), exports);
+//# sourceMappingURL=index.js.map

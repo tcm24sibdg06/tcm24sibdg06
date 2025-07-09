@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "build": "lb-tsc",
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "lint": "eslint --report-unused-disable-directives --ext .ts",
+    "pretest": "npm run lint && npm run build",
+    "test": "lb-mocha \"dist/__tests__\""
+  },
+  "devDependencies": {
+    "@loopback/build": "^9.0.10",
+    "@loopback/rest-explorer": "^8.0.2",
+    "@loopback/testlab": "^8.0.1",
+    "@types/node": "^24.0.11",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@loopback/boot": "^8.0.2",
+    "@loopback/core": "^7.0.1",
+    "@loopback/repository": "^8.0.1",
+    "@loopback/rest": "^15.0.2",
+    "loopback-connector-mysql": "^7.1.4"
+  }
+}
